@@ -31,3 +31,16 @@
 */
 
 // YOUR CODE HERE
+function letterCount(string){
+  var newString=string.toLowerCase().split("");
+  var x=[];
+  for(var i = 0; i<newString.length; i++){
+  x = newString.filter(function(letter){
+    return letter[0] === newString[i];
+  });
+
+  console.log(x[0]+": "+x.length/newString.length);
+  newString=newString.filter(function(filter){return filter !== x[0]})
+
+};
+}
